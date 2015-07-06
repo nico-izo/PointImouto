@@ -1,16 +1,16 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document domain("point.im") {
-  @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+  @import url(//weloveiconfonts.com/api/?family=fontawesome);
 
   /* fontawesome */
   [class*="fontawesome-"]:before {
     font-family: 'FontAwesome', sans-serif;
   }
 
-  
+
   #header-wrap {
-	display: none;
+    display: none;
   }
 
   #subheader-wrap {
@@ -42,7 +42,7 @@
     width: auto;
     background: #EEE;
   }
-  
+
   #main-wrap #main #left-menu a {
     font-size: 0;
     width: 64px;
@@ -53,68 +53,68 @@
     background: none no-repeat scroll 24px center / 16px 16px transparent;*/
     padding: 0;
   }
-  
+
   #main #left-menu a span:not(.unread) {
     font-size: 12px;
   }
 
-  
+
   #main #left-menu a:hover {
     background-color: #d0d0d0 !important;
   }
-  
+
   #main #left-menu a.active {
     box-shadow: 0 0 10px rgba(0,0,0,0.3) inset;
   }
-  
+
   #main .aside {
     order: 2;
     float: none;
   }
-  
+
   #main #content {
     margin-right: 0;
     margin-left: 0;
     order: 1;
     flex: 2 auto;
     max-width: calc(1240px - 280px);
-    
+
   }
-  
+
   #main {
    display: flex;
    background: #fff;
   }
-  
+
   #main-wrap {
     background: #eee;
   }
-  
+
   #main-wrap #main #left-menu #top-link {
     border: 0;
     position: static;
     height: 100%;
   }
-  
+
   .comments {
     margin-left: 40px;
   }
-  
+
   .post {
     /*margin: 0;
     padding: 0;*/
   }
-  
+
   #footer {
     margin: 0px auto;
     background: #fff;
     border-top: 1px solid #eee;
   }
-    
+
   .post .action-labels {
     opacity: 1;
   }
-  
+
   .tag:hover, #tags .tag:hover { /* fucking shit, YOBANIE PRIOPITETY */
     background: #D2D8E0;
   }
@@ -122,7 +122,7 @@
   .tag:hover::before {
     border-color: transparent #D2D8E0;
   }
-  
+
   #footer #menu > div a:hover {
     color: #7A7A7A;
     text-decoration: underline;
@@ -131,24 +131,24 @@
   #footer #menu > div a {
     text-decoration: none;
   }
-  
+
   @media only screen and (max-width: 1368px) {
     /* Style adjustments for viewports that meet the condition */
   }
-  
+
   @media only screen and (max-width: 1023px) {
     #main {
       flex-direction: column;
     }
-    
+
     #main #content {
       order: 2;
     }
-    
+
     #main .aside {
       order: 1;
     }
-    
+
     #main .aside {
       margin-left: 0;
     }
