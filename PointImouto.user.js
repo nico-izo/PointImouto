@@ -68,18 +68,31 @@
 	$("#left-menu #menu-bookmarks").addClass("fa-star-o");
 	$("#left-menu #top-link").addClass("fa-arrow-circle-o-up");
 
-	$(".postimg.gif").click(function() {
-		var o = $(this).children().first();
-		if(!o.attr("data-url") || $(this).hasClass("gif")) {
-			o.attr("data-url", o.attr("src"));
-			o.attr("src", $(this).attr("href"));
+
+	var imageTemplate = "<img class='realgif' src='%IMAGE%' style='max-width: 100%;' />";
+
+	var toggleGif = function() {
+		var previewImage = $(this).children().first();
+		
+		if($(this).hasClass("gif")) {
+			previewImage.hide();
+			if(!$(this).attr("data-inserted")) {
+				$(imageTemplate.replace("%IMAGE%", $(this).attr("href"))).insertAfter(previewImage);
+				
+				$(this).attr("data-inserted", "true");
+			} else {
+				$(this).children(".realgif").show();
+			}
 			$(this).removeClass("gif");
 		} else {
-			o.attr("src", o.attr("data-url"));
+			$(this).children(".realgif").hide();
+			previewImage.show();
 			$(this).addClass("gif");
 		}
 
 		return false;
-	});
+	};
+
+	$(".postimg.gif").click(toggleGif);
 
 })(window.$);
