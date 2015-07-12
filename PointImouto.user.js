@@ -73,12 +73,12 @@
 
 	var toggleGif = function() {
 		var previewImage = $(this).children().first();
-		
+
 		if($(this).hasClass("gif")) {
 			previewImage.hide();
 			if(!$(this).attr("data-inserted")) {
 				$(imageTemplate.replace("%IMAGE%", $(this).attr("href"))).insertAfter(previewImage);
-				
+
 				$(this).attr("data-inserted", "true");
 			} else {
 				$(this).children(".realgif").show();
