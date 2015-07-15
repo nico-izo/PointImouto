@@ -27,11 +27,6 @@
 \
 #left-menu [class*='fa-']:hover::before { opacity: 0.6; }\
 ";
-
-	// this is only for debug purposes only
-	//$("head").append('<link rel="stylesheet" href="http://wtf.nico-izo.moe/pointimouto/PointImouto.css" type="text/css" />');
-
-
 	var avatarUrl = "//point.im/avatar/%nickname%/40";
 
 	var me = $("div#name h1").html();
@@ -67,7 +62,6 @@
 	$("#left-menu #menu-messages").addClass("fa-envelope");
 	$("#left-menu #menu-bookmarks").addClass("fa-star-o");
 	$("#left-menu #top-link").addClass("fa-arrow-circle-o-up");
-
 
 	var imageTemplate = "<img class='realgif' src='%IMAGE%' style='max-width: 100%;' />";
 
