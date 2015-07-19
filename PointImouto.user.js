@@ -32,7 +32,7 @@
 	var me = $("div#name h1").html();
 	var avatar = avatarUrl.replace("%nickname%", me);
 
-	metaStyle += "body #main-wrap #main #left-menu #menu-blog { background: url(" + avatar + ") no-repeat scroll 11px center; }";
+	metaStyle += "body #main-wrap #main #left-menu #menu-blog { background: transparent url(" + avatar + ") no-repeat scroll 11px center; }";
 
 	$("head").append("<style>" + metaStyle + "</style>");
 

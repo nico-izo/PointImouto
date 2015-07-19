@@ -66,6 +66,10 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.3) inset;
   }
 
+  #menu-blog.active {
+    background-color: #fff !important;
+  }
+
   #main .aside {
     order: 2;
     float: none;
