@@ -5,11 +5,8 @@
 // @include http*://*point.im*
 // @exclude http*://*point.im/statistics
 // @run-at document-end
-// @version 1.1.5.0
+// @version 1.1.6.0
 // @grant none
-// @require https://github.com/radjah/pointext/raw/master/jq/jquery.js
-// @require https://github.com/radjah/pointext/raw/master/jq/bquery_ajax.js
-// @require https://raw.githubusercontent.com/eligrey/hotlink.js/master/hotlink.js
 // ==/UserScript==
 
 /**
@@ -169,11 +166,16 @@ var ReferrerKiller = (function () {
 
 /* ReferrerKilled end */
 
+/* Wrap begin */
+(function($) {
+
 var yandexRichContentTemplate = "<div class=\"yandex-rca\" style=\"overflow: hidden;\" > \
 								 <div class=\"yandex-rca-image\" data-src=\"%IMAGE%\" style=\"max-width: 100%; float: left; width: 100%;\"></div> \
 								 <b class=\"yandex-rca-title\">%TITLE%</b> \
 								 <br/> \
 								 <span class=\"yandex-rca-content\">%CONTENT%</span> \
+								 <br/> \
+								 <br/> \
 								 </div>";
 var blacklist = ["gelbooru.com", "www.zerochan.net", "zerochan.net"];
 var fullblacklist = ["coub.com", "www.coub.com"];
@@ -258,3 +260,5 @@ $(".post-content a" + stupidSelector).each(function() {
 		insertPreview.call(self, data, fail);
 	});
 });
+
+})(window.$); /* Wrap end */
