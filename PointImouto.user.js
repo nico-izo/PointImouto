@@ -40,7 +40,7 @@
 	var menuProfile = $("#menu-profile");
 	var menuSearch = $('<a class="fa-search" id="menu-search" href="/search"></a>');
 
-	var menuAddPost = $('<a class="fa-plus-circle" id="add-message" href="#addPost"></a>');
+	var menuAddPost = $('<a class="fa-plus-circle" id="add-message" href="#"></a>');
 
 	menuProfile.addClass("fa-wrench");
 	menuLogout.addClass("fa-sign-out")
@@ -49,7 +49,7 @@
 	var menuLast = $("#left-menu #menu-bookmarks");
 
 	menuAddPost.click(function() {
-		$("#new-post-label").click();
+		$("#new-post-cb").prop("checked", true);
 	});
 
 	menuLast.after(menuLogout);
