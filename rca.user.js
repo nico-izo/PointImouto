@@ -253,7 +253,10 @@ $(".post-content a" + stupidSelector).each(function() {
 		fail = true;
 		var urlarr = this.href.match(new RegExp('^https?\\://(www\\.)?gelbooru\\.com\\/index\\.php\\?page\\=post&s\\=view&id=([0-9]+)', 'i'))
 
-		t = "//acao-0x588.herokuapp.com/acao/gelbooru.com/index.php?page=dapi&s=post&q=index&id=" + urlarr[2];
+		if(!urlarr)
+			fail = false;
+		else
+			t = "//acao-0x588.herokuapp.com/acao/gelbooru.com/index.php?page=dapi&s=post&q=index&id=" + urlarr[2];
 	}
 
 	$.get(t, function(data) {
