@@ -260,7 +260,11 @@ $(".post-content a" + stupidSelector).each(function() {
 	}
 
 	$.get(t, function(data) {
-		insertPreview.call(self, data, fail);
+		try {
+			insertPreview.call(self, data, fail);
+		} catch (e) {
+			console.log("Something bad happened", e);
+		}
 	});
 });
 
